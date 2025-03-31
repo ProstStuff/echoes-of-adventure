@@ -1,7 +1,7 @@
-package com.echoes.echoesofadventure.common.item;
+package com.echoes.eoa.common.item;
 
-import com.echoes.echoesofadventure.EchoesOfAdventure;
-import com.echoes.echoesofadventure.common.block.ModBlock;
+import com.echoes.eoa.EchoesOfAdventure;
+import com.echoes.eoa.common.block.ModBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -16,11 +16,11 @@ public class ModItemGroup {
 
     public static final Supplier<CreativeModeTab> EOA_ITEM_GROUP = ITEM_GROUP.register("end",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModBlock.END_GRASS))
+                    .icon(() -> new ItemStack(ModBlock.CRACKED_BRICKS))
                     .title(Component.translatable("itemGroup.echoesofadventure"))
-                    .displayItems((
-                            (itemDisplayParameters, output) -> {
+                    .displayItems(((itemDisplayParameters, output) -> {
                         output.accept(ModBlock.END_GRASS);
+                        output.accept(ModBlock.CRACKED_BRICKS);
                     }))
 
                     .build());

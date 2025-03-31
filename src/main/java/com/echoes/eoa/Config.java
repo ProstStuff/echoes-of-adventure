@@ -1,4 +1,4 @@
-package com.echoes.echoesofadventure;
+package com.echoes.eoa;
 
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

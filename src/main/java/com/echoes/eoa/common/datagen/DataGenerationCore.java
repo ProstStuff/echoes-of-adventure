@@ -1,6 +1,6 @@
-package com.echoes.echoesofadventure.common.datagen;
+package com.echoes.eoa.common.datagen;
 
-import com.echoes.echoesofadventure.EchoesOfAdventure;
+import com.echoes.eoa.EchoesOfAdventure;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -23,5 +23,6 @@ public class DataGenerationCore {
         generator.addProvider(event.includeServer(), new TranslationProvider(pack, "en_us"));
         generator.addProvider(event.includeServer(), new BlockModelProvider(pack, fileHelper));
         generator.addProvider(event.includeServer(), new ItemModelProvider(pack, fileHelper));
+        generator.addProvider(event.includeServer(), new BlockStateProvider(pack, fileHelper));
     }
 }

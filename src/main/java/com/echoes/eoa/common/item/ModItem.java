@@ -1,6 +1,6 @@
-package com.echoes.echoesofadventure.common.item;
+package com.echoes.eoa.common.item;
 
-import com.echoes.echoesofadventure.EchoesOfAdventure;
+import com.echoes.eoa.EchoesOfAdventure;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 

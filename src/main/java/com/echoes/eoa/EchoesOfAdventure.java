@@ -1,8 +1,8 @@
-package com.echoes.echoesofadventure;
+package com.echoes.eoa;
 
-import com.echoes.echoesofadventure.common.block.ModBlock;
-import com.echoes.echoesofadventure.common.item.ModItem;
-import com.echoes.echoesofadventure.common.item.ModItemGroup;
+import com.echoes.eoa.common.block.ModBlock;
+import com.echoes.eoa.common.item.ModItem;
+import com.echoes.eoa.common.item.ModItemGroup;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.User;
@@ -22,7 +22,7 @@ import org.slf4j.Logger;
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(EchoesOfAdventure.MOD_ID)
 public class EchoesOfAdventure {
-    public static final String MOD_ID = "echoesofadventure";
+    public static final String MOD_ID = "eoa";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public EchoesOfAdventure(IEventBus modEventBus, ModContainer modContainer) {
@@ -62,12 +62,5 @@ public class EchoesOfAdventure {
             User user = Minecraft.getInstance().getUser();
             print(String.format("Username: %s | UUID: %s", user.getName(), user.getProfileId()));
         }
-    }
-
-    public static String turnToIdWithNamespace(String id) {
-        return MOD_ID + ":" + id;
-    }
-    public static String turnToIdWithNamespace(String namespace, String id) {
-        return namespace + ":" + id;
     }
 }

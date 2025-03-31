@@ -1,6 +1,7 @@
-package com.echoes.echoesofadventure.common.datagen;
+package com.echoes.eoa.common.datagen;
 
-import com.echoes.echoesofadventure.EchoesOfAdventure;
+import com.echoes.eoa.EchoesOfAdventure;
+import com.echoes.eoa.common.block.ModBlock;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -12,5 +13,8 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
     @Override
     protected void registerModels() {
         // basicItem[ITEM_ID])
+
+        simpleBlockItem(ModBlock.END_GRASS.get());
+        simpleBlockItem(ModBlock.CRACKED_BRICKS.get());
     }
 }
