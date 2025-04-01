@@ -1,5 +1,10 @@
 {
+  "block.eoa.cracked_brick_slab": "Cracked Brick Slab",
+  "block.eoa.cracked_brick_stairs": "Cracked Brick Stairs",
+  "block.eoa.cracked_brick_wall": "Cracked Brick Wall",
   "block.eoa.cracked_bricks": "Cracked Bricks",
-  "block.eoa.end_grass": "End Grass",
+  "block.eoa.cracked_stone_brick_slab": "Cracked Stone Slab",
+  "block.eoa.cracked_stone_brick_stairs": "Cracked Stone Brick Stairs",
+  "block.eoa.cracked_stone_brick_wall": "Cracked Stone Wall",
   "itemGroup.echoesofadventure": "Echoes of Adventure"
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "eoa:block/cracked_brick_slab"
+    },
+    "type=double": {
+      "model": "eoa:block/cracked_bricks"
+    },
+    "type=top": {
+      "model": "eoa:block/cracked_brick_slab_top"
+    }
+  }
+}
