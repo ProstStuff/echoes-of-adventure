@@ -1,3 +1,8 @@
-// 1.21.1	2025-03-31T20:52:50.1200601	Item Models: eoa
+// 1.21.1	2025-04-01T14:20:57.5291158	Item Models: eoa
 994954b44bd0081bf48411e8bb18d34d146e4805 assets/eoa/models/item/cracked_bricks.json
-beeba015892211596e10b98fcae80c5b0e0ffd78 assets/eoa/models/item/end_grass.json
+2f63ce8f4723be989acf04caa06239368d64663a assets/eoa/models/item/cracked_brick_slab.json
+b7813b10a23365eb9ff7576e945e6f37535adf6b assets/eoa/models/item/cracked_brick_stairs.json
+26fba5caa5608de6d59374b8b93afdf1610c1c01 assets/eoa/models/item/cracked_brick_wall.json
+9b7046b4d24364d44e622b70fcdd1e0562a5ade2 assets/eoa/models/item/cracked_stone_brick_slab.json
+eca25c689ebfbdcd9e3b077b821a0ac2430d9d48 assets/eoa/models/item/cracked_stone_brick_stairs.json
+71810fc23761c81409be4cc2b1d8157b6a295e08 assets/eoa/models/item/cracked_stone_brick_wall.json

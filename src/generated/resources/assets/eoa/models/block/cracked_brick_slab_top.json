@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "eoa:block/cracked_bricks",
+    "side": "eoa:block/cracked_bricks",
+    "top": "eoa:block/cracked_bricks"
+  }
+}

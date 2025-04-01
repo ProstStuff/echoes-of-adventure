@@ -1,0 +1,8 @@
+// 1.21.1	2025-04-01T14:13:16.9228396	Loot Tables
+04e6ea7ae7ac126486ae8cd371afa65598400dec data/eoa/loot_table/blocks/cracked_bricks.json
+17559b0b334eedacd7ed2ff7f2b6d8ba5007f650 data/eoa/loot_table/blocks/cracked_brick_slab.json
+37a48d2a0b3484ac6a5aa48bf507b8775feee385 data/eoa/loot_table/blocks/cracked_brick_stairs.json
+e4dac3d0786f0e2d797b74d359bf9d83b7c5c771 data/eoa/loot_table/blocks/cracked_brick_wall.json
+9591567e3a8b3967e017685b9296542cf3631227 data/eoa/loot_table/blocks/cracked_stone_brick_slab.json
+aa391b265e50cf338fd85d88398da1c5516e3802 data/eoa/loot_table/blocks/cracked_stone_brick_stairs.json
+be9aa71c50d66c1a1fa385645a72477e500f2d6a data/eoa/loot_table/blocks/cracked_stone_brick_wall.json

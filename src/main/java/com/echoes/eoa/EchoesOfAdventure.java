@@ -1,11 +1,12 @@
 package com.echoes.eoa;
 
-import com.echoes.eoa.common.block.ModBlock;
-import com.echoes.eoa.common.item.ModItem;
+import com.echoes.eoa.common.block.ModBlocks;
+import com.echoes.eoa.common.item.ModItems;
 import com.echoes.eoa.common.item.ModItemGroup;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.User;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -28,8 +29,8 @@ public class EchoesOfAdventure {
     public EchoesOfAdventure(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
-        ModBlock.register(modEventBus);
-        ModItem.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModItems.register(modEventBus);
         ModItemGroup.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
@@ -62,5 +63,12 @@ public class EchoesOfAdventure {
             User user = Minecraft.getInstance().getUser();
             print(String.format("Username: %s | UUID: %s", user.getName(), user.getProfileId()));
         }
+    }
+
+    public static ResourceLocation getId(String id) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, id);
+    }
+    public static ResourceLocation getId(String id, String suffix) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, suffix+ "/" +id);
     }
 }
