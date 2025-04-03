@@ -19,7 +19,7 @@ public class ModItemGroup {
                     .icon(() -> new ItemStack(ModBlocks.CRACKED_BRICKS))
                     .title(Component.translatable("itemGroup.echoesofadventure"))
                     .displayItems(((itemDisplayParameters, output) -> {
-                        //output.accept(ModBlock.END_GRASS);
+                        output.accept(ModBlocks.CHORUS_GRASS);
                         output.accept(ModBlocks.CRACKED_BRICKS);
                         output.accept(ModBlocks.CRACKED_BRICK_STAIRS);
                         output.accept(ModBlocks.CRACKED_BRICK_SLAB);
