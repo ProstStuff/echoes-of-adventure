@@ -15,14 +15,10 @@ public class Config {
     static final ModConfigSpec commonSpec;
     public static final Config.Common COMMON;
 
-    @SubscribeEvent
+    /*@SubscribeEvent
     public static void onLoad(ModConfigEvent.Loading configEvent) {
-        boolean debugLogging = COMMON.debugLogging.getAsBoolean();
 
-        if (debugLogging) {
-            EchoesOfAdventure.LOGGER.info("EOA configs are loaded...");
-        }
-    }
+    }*/
 
     @SubscribeEvent
     public static void onFileChange(ModConfigEvent.Reloading configEvent) {
@@ -41,11 +37,11 @@ public class Config {
 
     static {
         Pair<Object, ModConfigSpec> specPair = (new ModConfigSpec.Builder()).configure(Config.Client::new);
-        clientSpec = (ModConfigSpec) specPair.getRight();
+        clientSpec = specPair.getRight();
         CLIENT = (Config.Client) specPair.getLeft();
 
         specPair = (new ModConfigSpec.Builder()).configure(Config.Common::new);
-        commonSpec = (ModConfigSpec) specPair.getRight();
+        commonSpec = specPair.getRight();
         COMMON = (Config.Common) specPair.getLeft();
     }
 
@@ -55,7 +51,7 @@ public class Config {
         Common(ModConfigSpec.Builder builder) {
 
             this.debugLogging = builder
-                    .comment("Enable debug logging.")
+                    .comment("Enable debug logging (Default: false)")
                     .translation("eoa.config.debug_logging")
                     .define("debugLogging", false);
         }
@@ -66,7 +62,7 @@ public class Config {
 
         Client(ModConfigSpec.Builder builder) {
             this.holidayFeatures = builder
-                    .comment("Enable holiday feature(s) such as Christmas and Halloween.")
+                    .comment("Enable holiday features such as Christmas and Halloween (Default: true)")
                     .translation("eoa.config.holiday_features")
                     .define("holidayFeatures", true);
         }

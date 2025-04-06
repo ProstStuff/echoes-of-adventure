@@ -24,5 +24,7 @@ public class TranslationProvider extends LanguageProvider {
 
         // Others
         add("itemGroup.echoesofadventure", "Echoes of Adventure");
+        add("eoa.config.debug_logging", "Enabled Debug Logging");
+        add("eoa.config.holiday_features", "Disable Holiday Features");
     }
 }

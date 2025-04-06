@@ -9,6 +9,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class BlockStateProvider extends net.neoforged.neoforge.client.model.generators.BlockStateProvider {
+
     public BlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, EchoesOfAdventure.MOD_ID, exFileHelper);
     }
@@ -18,6 +19,7 @@ public class BlockStateProvider extends net.neoforged.neoforge.client.model.gene
 
         simpleBlock(ModBlocks.CHORUS_GRASS.get(), models().cross(ModBlocks.CHORUS_GRASS.getRegisteredName(), blockTexture(ModBlocks.CHORUS_GRASS.get())).renderType("cutout"));
         simpleBlock(ModBlocks.CRACKED_BRICKS.get());
+
         registerStairs(ModBlocks.CRACKED_BRICK_STAIRS, ModBlocks.CRACKED_BRICKS);
         registerSlab(ModBlocks.CRACKED_BRICK_SLAB, ModBlocks.CRACKED_BRICKS);
         registerWall(ModBlocks.CRACKED_BRICK_WALL, ModBlocks.CRACKED_BRICKS);

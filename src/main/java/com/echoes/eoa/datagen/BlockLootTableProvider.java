@@ -17,6 +17,7 @@ public class BlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        dropWhenSilkTouch(ModBlocks.CHORUS_PETALS.get());
         dropWhenSilkTouch(ModBlocks.CHORUS_GRASS.get());
         createShearsOnlyDrop(ModBlocks.CHORUS_GRASS.get());
 

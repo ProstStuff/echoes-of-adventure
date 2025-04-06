@@ -20,6 +20,7 @@ public class ModItemGroups {
                     .title(Component.translatable("itemGroup.echoesofadventure"))
                     .displayItems(((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.CHORUS_GRASS);
+                        output.accept(ModBlocks.CHORUS_PETALS);
                         output.accept(ModBlocks.CRACKED_BRICKS);
                         output.accept(ModBlocks.CRACKED_BRICK_STAIRS);
                         output.accept(ModBlocks.CRACKED_BRICK_SLAB);

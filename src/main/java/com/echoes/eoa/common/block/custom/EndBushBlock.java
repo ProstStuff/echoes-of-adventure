@@ -21,7 +21,7 @@ public class EndBushBlock extends BushBlock implements IShearable {
     }
 
     @Override
-    protected MapCodec<? extends BushBlock> codec() {
+    protected MapCodec<? extends EndBushBlock> codec() {
         return CODEC;
     }
 

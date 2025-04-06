@@ -1,11 +1,9 @@
 package com.echoes.eoa;
 
 import com.echoes.eoa.common.block.ModBlocks;
-import com.echoes.eoa.common.item.ModItems;
 import com.echoes.eoa.common.item.ModItemGroups;
+import com.echoes.eoa.common.item.ModItems;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.User;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -15,7 +13,6 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
@@ -24,44 +21,30 @@ import org.slf4j.Logger;
 @Mod(EchoesOfAdventure.MOD_ID)
 public class EchoesOfAdventure {
     public static final String MOD_ID = "eoa";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public EchoesOfAdventure(IEventBus modEventBus, ModContainer modContainer) {
-        modEventBus.addListener(this::commonSetup);
-
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModItemGroups.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-    }
-
-    public static void print(String s) {
-        if (Config.DEBUG_LOGGING) {
-            LOGGER.info(s);
-        }
-    }
-
-    private void commonSetup(final FMLCommonSetupEvent event) {
-        print("Hello, `debug-logging` option is on. You'll get a lot-lot of EOA debug logs.");
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.commonSpec);
+        modContainer.registerConfig(ModConfig.Type.CLIENT, Config.clientSpec);
+        //modEventBus.register(Config.class);
     }
 
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
-        print(String.format("Server starting with name %s", event.getServer().name()));
+    public void onServerStarting(ServerStartingEvent event) {
     }
 
     @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
+
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-            User user = Minecraft.getInstance().getUser();
-            print(String.format("Username: %s | UUID: %s", user.getName(), user.getProfileId()));
+        public static void onClientSetup(FMLClientSetupEvent event) {
+
         }
     }
 

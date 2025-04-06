@@ -2,8 +2,12 @@
   "feature": "eoa:chorus_grass",
   "placement": [
     {
-      "type": "minecraft:rarity_filter",
-      "chance": 4
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 4,
+        "min_inclusive": 0
+      }
     },
     {
       "type": "minecraft:in_square"

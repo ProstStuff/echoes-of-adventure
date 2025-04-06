@@ -9,6 +9,5 @@ public class ModItems {
 
     public static void register(IEventBus event) {
         ITEMS.register(event);
-        EchoesOfAdventure.print("Registering items...");
     }
 }

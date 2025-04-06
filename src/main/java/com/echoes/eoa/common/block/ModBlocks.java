@@ -2,6 +2,7 @@ package com.echoes.eoa.common.block;
 
 import com.echoes.eoa.EchoesOfAdventure;
 import com.echoes.eoa.common.block.custom.EndBushBlock;
+import com.echoes.eoa.common.block.custom.EndPetalsBlock;
 import com.echoes.eoa.common.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -18,6 +19,7 @@ public class ModBlocks {
 
     // The End
     public static final DeferredBlock<Block> CHORUS_GRASS = register("chorus_grass", () -> new EndBushBlock(Blocks.SHORT_GRASS.properties()));
+    public static final DeferredBlock<Block> CHORUS_PETALS = register("chorus_petals", () -> new EndPetalsBlock(Blocks.PINK_PETALS.properties()));
 
     // Cracked Variant
     private static final BlockBehaviour.Properties brick_property = Blocks.BRICKS.properties();
@@ -34,7 +36,6 @@ public class ModBlocks {
 
     public static void register(IEventBus event) {
         BLOCKS.register(event);
-        EchoesOfAdventure.print("Registering blocks...");
     }
 
     public static <T extends Block> DeferredBlock<T> register(String id, Supplier<T> supplier) {
